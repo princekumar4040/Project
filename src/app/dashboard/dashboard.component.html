@@ -1,0 +1,76 @@
+<body class="home">
+  <div class="container-fluid display-table">
+      <div class="row display-table-row">
+          <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+              <div class="logo">
+                  Dashboard
+              </div>
+              <div class="navi">
+                  <ul>
+                      <li class="active"><a routerLink="/dashboard/users"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Users</span></a></li>
+                      <li><a routerLink="/dashboard/posts"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Posts</span></a></li>
+                      <li><a ><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm"></span></a></li>
+                      <li><a ><i class="fa fa-user" aria-hidden="true"></i><span class="hidden-xs hidden-sm"></span></a></li>
+                      <li><a ><i class="fa fa-calendar" aria-hidden="true"></i><span class="hidden-xs hidden-sm"></span></a></li>
+                      <li><a ><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm"></span></a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-10 col-sm-11 display-table-cell v-align">
+              <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+              <div class="row">
+                  <header>
+                      <div class="col-md-7">
+                          <!-- <nav class="navbar-default pull-left">
+                              <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle collapsed" data-toggle="offcanvas" data-target="#side-menu" aria-expanded="false">
+                                      <span class="sr-only">Toggle navigation</span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                  </button>
+                              </div>
+                          </nav> -->
+                          <div class="search hidden-xs hidden-sm">
+                              <input type="text" placeholder="Search" id="search">
+                          </div>
+                      </div>
+                      <div class="col-md-5">
+                          <div class="header-rightside">
+                              <!-- <ul class="list-inline header-top pull-right">
+                                  <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                                  
+                                  <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">User
+                                          <b class="caret"></b></a>
+                                      <ul class="dropdown-menu">
+                                          <li>
+                                              <div class="navbar-content">
+                                                  <span>JS Krishna</span>
+                                                  <p class="text-muted small">
+                                                      me@jskrishna.com
+                                                  </p>
+                                                  <div class="divider">
+                                                  </div>
+                                                  <a href="#" class="view btn-sm active">View Profile</a>
+                                              </div>
+                                          </li>
+                                      </ul>
+                                  </li>
+                              </ul> -->
+                              <button type="submit" (click)="logout()">Logout</button>
+                            </div>
+                      </div>
+                  </header>
+              </div>
+              
+          </div>
+      </div>
+
+  </div>
+
+
+
+  
+
+</body>

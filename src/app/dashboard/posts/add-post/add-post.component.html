@@ -1,0 +1,17 @@
+
+<!-- Modal content-->
+<div class="modal-content">
+  <div class="modal-header login-header">
+      <h4 class="modal-title">{{postId !== 0?'Update':'Add'}} Post</h4>
+  </div>
+  <form [formGroup]="addPostForm" (ngSubmit)="saveForm()">
+    <div class="modal-body">
+                <input type="text" placeholder="Title" name="name" formControlName="title">
+                <textarea placeholder="Body" formControlName="body"></textarea>
+        </div>
+    <div class="modal-footer">
+        <button type="submit" class="cancel"><a routerLink="/dashboard/posts">Close</a></button>
+        <button type="submit" class="add-project" data-dismiss="modal">{{postId !== 0?'Update':'Add'}} Post</button>
+    </div>
+</form>
+</div>
