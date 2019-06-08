@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessagingService } from './messaging.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angproj';
+  constructor(public message: MessagingService) {
+    this.message.requestPermission('001');
+  }
 }
