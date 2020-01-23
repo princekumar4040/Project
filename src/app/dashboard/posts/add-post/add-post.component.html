@@ -2,7 +2,7 @@
 <!-- Modal content-->
 <div class="modal-content">
   <div class="modal-header login-header">
-      <h4 class="modal-title">{{postId !== 0?'Update':'Add'}} Post</h4>
+      <h3 class="modal-title">{{postId !== 0?'Update':'Add'}} Post</h3>
   </div>
   <form [formGroup]="addPostForm" (ngSubmit)="saveForm()">
     <div class="modal-body">

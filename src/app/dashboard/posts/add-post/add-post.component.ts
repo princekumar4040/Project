@@ -38,9 +38,12 @@ export class AddPostComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.route.params.subscribe(res => {
-      this.postId = +res.id || 0;
-    })
+
+     this.postId= parseInt(this.route.snapshot.paramMap.get('id'));
+
+    // this.route.params.subscribe(res => {
+    //   this.postId = +res.id || 0;
+    // })
     if(this.postId !== 0) {
       this.getPostDetails();
     }
@@ -48,11 +51,12 @@ export class AddPostComponent implements OnInit {
 
   getPostDetails() {
     this.post.editPost(this.postId).subscribe(res => {
-      this.addPostForm.patchValue(res)
-      // this.addPostForm.setValue({
+        this.addPostForm.patchValue(res)
+      //  this.addPostForm.setValue({
       //   title: res['title'],
       //   body: res['body']
       // })
+
     })
   }
 
