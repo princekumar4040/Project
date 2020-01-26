@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
+  url:string= ''
   public token;
-  constructor() { }
+  constructor( ) { }
 
   isAuthenticated() {
     this.token = localStorage.getItem('token');
@@ -13,4 +14,8 @@ export class AuthService {
       return this.token;
     }
   }
+
+ 
+
+
 }
