@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {Form,  FormBuilder, Validators, FormGroup} from '@angular/forms' 
 import { auth } from 'firebase';
-import {HttpClient} from "@angular/common/http"
+import {HttpClient, HttpHeaders} from "@angular/common/http"
 
 @Component({
   selector: 'app-login',
@@ -34,9 +34,27 @@ password:["",[Validators.required, Validators.maxLength(10)]]
     this.http.post(this.url, this.myGroup.value).subscribe( res=>{
 
       this.route.navigate(['dashboard']);
+      localStorage.setItem('token', res['token']);
        console.log(res)
     } )
 
   }
+
+  check()
+  {
+      const t=localStorage.getItem('token')
+  
+    var headers_object = new HttpHeaders().set("Authorization", t);
+
+
+        const httpOptions = {
+          headers: headers_object
+        };
+ this.http.get('http://localhost:8080/data', httpOptions).subscribe(res=>console.log(res))
+
+  }
+
+
+
 
 }
